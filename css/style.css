@@ -1,0 +1,172 @@
+/* 
+    Document   : style
+    Created on : 4-mar-2013, 17.58.01
+    Author     : Bart
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/*html { 
+	background: url(../img/texture/background.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}*/
+html { 
+    background-image: url(../img/texture/stressed_linen.png);
+    background-repeat: repeat;
+}
+body { text-align: center; color: #878787; }
+img { display: block; }
+a { color: red; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+
+/* OPENING CREDITS */
+#opening_credits img { max-width: 500px; width: 90%; margin: 30px auto; }
+
+/* CREDITS */
+#credits { max-width: 400px; margin: 30px auto; padding: 0 20px; text-align: justify; }
+
+/* window winner */
+#winner_window_ {
+	position:fixed;
+    top: 50%;
+    left: 50%;
+    width:400px;
+    height:300px;
+    margin-top: -150px; /*set to a negative number 1/2 of your height*/
+    margin-left: -200px; /*set to a negative number 1/2 of your width*/
+    border: 1px solid #ccc;
+    background-color: red;
+	z-index: 10;
+}
+
+/* Title */
+#title {
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-size: 70px;
+    font-weight: normal;
+	margin: 10px auto;
+}
+/* Menu Select */
+#menu .select { color: black; }
+
+/* Menu Button */
+.button {
+    border-top: 1px solid #782020;
+    background: #996b6b;
+    background: -webkit-gradient(linear, left top, left bottom, from(#752828), to(#996b6b));
+    background: -webkit-linear-gradient(top, #752828, #996b6b);
+    background: -moz-linear-gradient(top, #752828, #996b6b);
+    background: -ms-linear-gradient(top, #752828, #996b6b);
+    background: -o-linear-gradient(top, #752828, #996b6b);
+    padding: 16px 30px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    box-shadow: rgba(0,0,0,1) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    color: white;
+    font-size: 17px;
+    font-family: Georgia, serif;
+    text-decoration: none;
+    vertical-align: middle;
+    width: 200px;
+    margin: 30px auto;
+    cursor: pointer;
+}
+.button:hover {
+    border-top-color: #872626;
+    background: #872626;
+    color: #ffffff;
+}
+.button:active {
+    border-top-color: #1b435e;
+    background: #1b435e;
+}
+.button_mini {
+	padding: 6px 10px;
+	-webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+	font-size: 13px;
+	width: 60px;
+}
+
+/* Game Table */
+.table_game {
+	border: 1px solid red;
+	border-collapse: collapse;
+	margin: 30px auto;
+}
+.table_game td {
+    border: 1px solid red;
+}
+.table_game .element div {
+    background-color: black;
+	width: 100px;
+	height: 100px;
+}
+
+/* Timer Clock */
+#timer { font-size: 30px; margin: 40px auto;}
+
+#author { font-size: 15px; }
+
+/* TABLE SCORE */
+.table_score {
+	min-width: 400px;
+	max-width: 600px;
+	margin: 30px auto;
+	border-collapse: collapse;
+}
+.table_score th {
+	padding: 5px 10px;
+	background-color: #E34E4E;
+	color: #911616;
+}
+.table_score tr {
+	background-color: #F4B7B7;
+	color: #C81C1C;
+	border-bottom: 1px solid white;
+}
+.table_score td {
+	padding: 5px 10px;
+}
+
+
+
+@media only screen and (max-width: 480px) { 
+	.element div { width: 80px; height: 80px; }
+	#title { font-size: 60px; }
+	#author { font-size: 14px; }
+	.window_win { 
+		width:300px;
+		height:200px;
+		margin-top: -100px; /*set to a negative number 1/2 of your height*/
+		margin-left: -150px; /*set to a negative number 1/2 of your width*/ 
+	}
+}
+@media only screen and (max-width: 380px) { 
+	.element div { width: 60px; height: 60px; }
+	.button { width: 160px; margin: 20px auto; }
+	#title { font-size: 50px; }
+	#author { font-size: 13px; }
+	.window_win { 
+		width:200px;
+		height:120px;
+		margin-top: -60px; /*set to a negative number 1/2 of your height*/
+		margin-left: -100px; /*set to a negative number 1/2 of your width*/ 
+	}
+}
+@media only screen and (max-width: 280px) { 
+	.element div { width: 40px; height: 40px; }
+	.button { width: 140px; margin: 10px auto; }
+	#title { font-size: 40px; }
+	#author { font-size: 12px; }
+	.window_win { }
+}
