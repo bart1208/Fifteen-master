@@ -2,7 +2,7 @@
  * @author Bart
  */
  
- define(["jquery-2.1.1.min", "jquery.blockUI", "../app/MenuState", "../app/GameState", "../app/ScoreState", "../app/CreditsState"], function($) {
+ define(["jquery-2.1.3.min", "jquery.blockUI", "bootstrap.min", "modernizr-2.6.2-respond-1.1.0.min", "../app/MenuState", "../app/GameState", "../app/ScoreState", "../app/CreditsState"], function($) {
 	
 	/* Global Variables */
 	var table_dimension = 4;		// Dimension of the table (dimension X dimension)
