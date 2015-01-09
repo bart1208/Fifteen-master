@@ -14,42 +14,68 @@
         <script data-main="js/main" src="js/vendor/require.js"></script>
         
         <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+        <link rel="stylesheet" href="css/main.css">
         <style>
             body {
                 padding-top: 50px;
                 padding-bottom: 20px;
             }
         </style>
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="css/main.css">
         
         <link href='//fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps' rel='stylesheet' type='text/css'>
     </head>
     <body>
-        <div>
-            <header>
-            	<h1 id="title">15 Puzzle</h1>
-            </header>
-            
-            <div id="content"></div>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+    	<div class="jumbotron">
+      		<div class="container">
+        		<h1 id="title">15 Puzzle</h1>
+        		<p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as 					a starting point to create something more unique.</p>
+      		</div>
+    	</div>
+        
+        <div class="container">
+            <div class="col-md-12">
+                <header>
+                    <h1 id="title">15 Puzzle</h1>
+                </header>
 
-            <footer>
-                <p id="author">
-					&copy; Copyright 2013 <a target="_blank" href="http://www.fenrir.it">Bartolomeo Pasquale</a>
-				</p>
-            </footer>
-		</div>
+                <div id="content"></div>
+
+                <footer>
+                    <p id="author">
+                         &copy; Copyright 2013 <a target="_blank" href="http://www.fenrir.it">Bartolomeo Pasquale</a>
+                    </p>
+                </footer>
+            </div>
+        </div>
 		
-		<!-- Create winner window element to show when win a game -->
-		<div id="winner_window" style="display: none;">
-			<h2>Completed table</h2>
-			<h4>Write you name and save the result</h4>
-			<input id="name" type="text" placeholder="Name" />
-			<button class="button button_mini" 
-					onclick="saveScore( $('#name').val() ); $.unblockUI(); gameMenu(); ">
-				Save
-			</button>
-		</div>
+		<!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+              </div>
+              <div class="modal-body">
+              	<h2>Completed table</h2>
+				<h4>Write you name and save the result</h4>
+				<input id="player_name" type="text" placeholder="Name" />
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="saveScore( $('#player_name').val() ); ">Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
         
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

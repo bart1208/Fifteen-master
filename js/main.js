@@ -5,11 +5,10 @@
 require.config({
     baseUrl: "js/vendor",
     paths: {
-      app: "../app"
+    	jquery: "jquery-2.1.3.min",
+      	app: "../app"
     },
     shim: {
-        "jquery.blockUI": ["jquery-2.1.3.min"],
-        "bootstrap.min": ["jquery-2.1.3.min"]
     }
 });
 

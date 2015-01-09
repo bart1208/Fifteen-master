@@ -2,7 +2,7 @@
  * @author Bart
  */
  
- define(["jquery-2.1.3.min", "jquery.blockUI", "bootstrap.min", "modernizr-2.6.2-respond-1.1.0.min", "../app/MenuState", "../app/GameState", "../app/ScoreState", "../app/CreditsState"], function($) {
+ define(["jquery", "bootstrap.min", "modernizr-2.6.2-respond-1.1.0.min", "../app/MenuState", "../app/GameState", "../app/ScoreState", "../app/CreditsState"], function($) {
 	
 	/* Global Variables */
 	var table_dimension = 4;		// Dimension of the table (dimension X dimension)
@@ -14,29 +14,3 @@
 	gameMenu(); 
 	
 });
-
-
-
-
-/**
- * MAIN FUNCTION
- * Include all javascript file in the project
- */
- /*
-$(document).ready(function() {
-	$.getScript("js/MenuState.js", function() {
-		$.getScript("js/GameState.js", function() {
-			$.getScript("js/ScoreState.js", function() {
-				$.getScript("js/CreditsState.js", function() {
-					gameMenu();
-				});
-			});
-		});
-	});
-});
-
-
-$(document).ready(function() {
-	gameMenu();
-});
-* */

@@ -41,7 +41,7 @@ function newGame()
 			var td = $("<td/>").appendTo(tr);
 			td.attr("id", count);
 			td.addClass("element");
-			td.mousedown( function() { moveElement(this.id);} )
+			td.mousedown( function() { moveElement(this.id);} );
 			
 			if( count < number_elements ) {
 				$("<div />").attr("value", count).css("position", "relative").html(count).appendTo(td);
@@ -107,7 +107,7 @@ function moveElement( id )
 		
 		if( checkWin() ) {					// If the player win game...
 			clearInterval(id_timing);		// Block timer
-			$.blockUI({ message: $("#winner_window") });					
+			$('#myModal').modal('show');				
 		}
 	}
 	
