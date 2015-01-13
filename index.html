@@ -18,7 +18,6 @@
         <link rel="stylesheet" href="css/main.css">
         <style>
             body {
-                padding-top: 50px;
                 padding-bottom: 20px;
             }
         </style>
@@ -32,26 +31,31 @@
         
         <!-- Main jumbotron for a primary marketing message or call to action -->
     	<div class="jumbotron">
-      		<div class="container">
-        		<h1 id="title">15 Puzzle</h1>
+      		<div class="container title">
+        		<h1 class="title">15 Puzzle</h1>
         		<p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as 					a starting point to create something more unique.</p>
       		</div>
     	</div>
         
         <div class="container">
-            <div class="col-md-12">
-                <header>
-                    <h1 id="title">15 Puzzle</h1>
-                </header>
+            <div class="row">
+            	<div class="col-md-12">
+                
+                    <div class="menu" id="content-menu">
+                    	<button type="button" class="btn btn-primary btn-lg btn-block" onclick="newGame();">New Game</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="createRankingScore();">Score</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="optionsMenu();">Options</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="createCreditsWindow();">Credits</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="">Exit</button>
+                    </div>
 
-                <div id="content"></div>
-
-                <footer>
-                    <p id="author">
-                         &copy; Copyright 2013 <a target="_blank" href="http://www.fenrir.it">Bartolomeo Pasquale</a>
-                    </p>
-                </footer>
+            	</div>
             </div>
+            <footer>
+                <p>
+                    &copy; Copyright 2015 <a target="_blank" href="http://www.fenrir.it">Bartolomeo Pasquale</a>
+                </p>
+            </footer>
         </div>
 		
 		<!-- Modal -->
@@ -75,6 +79,14 @@
           </div>
         </div>
         
+        <!-- Game -->
+        <div id="content-game">
+            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="newGame();">New Game</button>
+            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="createRankingScore();">Score</button>
+            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="optionsMenu();">Options</button>
+            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="createCreditsWindow();">Credits</button>
+            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="">Exit</button>
+        </div>
         
         
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

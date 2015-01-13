@@ -3,6 +3,12 @@
  * Launch the game and manages the various phases of the game 
  */
 
+define(["jquery", "bootstrap.min", "modernizr-2.6.2-respond-1.1.0.min", "../app/MenuState", "../app/GameState", "../app/ScoreState", "../app/CreditsState"], function($) {
+	
+	gameMenu(); 
+	
+});
+
 
 /* Global Variables */
 var table_dimension = 4;		// Dimension of the table (dimension X dimension)
@@ -24,10 +30,10 @@ var id_timing = null;			// Id timing to stop the timer
 // New Game - Create a table and start game
 function newGame() 
 {	
-	var count = 1;			// Counter
-	timer_game = 0;			// Reset time
-	number_movements = 0;	// Reset number of movements during the game
-	$("#content").empty();		// Empty the main content page
+	var count = 1;				// Counter
+	timer_game = 0;				// Reset time
+	number_movements = 0;		// Reset number of movements during the game
+	$("#content-menu").hide();		// Hide the main menu
 	
 	$("<div>Back</div>").addClass("button button_mini").click( function() { clearInterval(id_timing); gameMenu(); } ).appendTo( $("#content") );	// Back key in game session
 	var timer_element = $("<div>Time 00:00</div>").attr("id", "timer").appendTo( $("#content") );					// DOM element where insert time counter

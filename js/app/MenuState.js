@@ -7,14 +7,7 @@
 // MAIN MENU
 function gameMenu()
 {
-	$("#content").empty();			// Empty the main content page
 	
-	var menu = $("<div/>").attr("id", "menu").appendTo( $("#content") );
-	$("<div/>").addClass("button").click( function() { newGame(); } ).append("New Game").appendTo(menu);
-	$("<div/>").addClass("button").click( function() { createRankingScore(); } ).append("Score").appendTo(menu);
-	$("<div/>").addClass("button").click( function() { optionsMenu(); } ).append("Options").appendTo(menu);
-	$("<div/>").addClass("button").click( function() { createCreditsWindow(); } ).append("Credits").appendTo(menu);
-	$("<div/>").addClass("button").click( function() {  } ).append("Exit").appendTo(menu);
 }
 
 // OPTIONS MENU

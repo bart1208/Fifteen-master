@@ -9,8 +9,9 @@ require.config({
       	app: "../app"
     },
     shim: {
+        "bootstrap.min": ["jquery"]
     }
 });
 
 // Load the main app module to start the app
-requirejs(["app/main"]);
+requirejs(["app/GameState"]);
