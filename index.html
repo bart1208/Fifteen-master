@@ -39,9 +39,9 @@
         
         <div class="container">
             <div class="row">
-            	<div class="col-md-12">
+            	<div id="content" class="col-md-12">
                 
-                    <div class="menu" id="content-menu">
+                    <div id="content-menu" class="menu">
                     	<button type="button" class="btn btn-primary btn-lg btn-block" onclick="newGame();">New Game</button>
                         <button type="button" class="btn btn-primary btn-lg btn-block" onclick="createRankingScore();">Score</button>
                         <button type="button" class="btn btn-primary btn-lg btn-block" onclick="optionsMenu();">Options</button>
@@ -73,21 +73,11 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" onclick="saveScore( $('#player_name').val() ); ">Save</button>
+                <button type="button" class="btn btn-primary" onclick="saveScore( $('#player_name').val() ); $('#myModal').modal('hide');">Save</button>
               </div>
             </div>
           </div>
         </div>
-        
-        <!-- Game -->
-        <div id="content-game">
-            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="newGame();">New Game</button>
-            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="createRankingScore();">Score</button>
-            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="optionsMenu();">Options</button>
-            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="createCreditsWindow();">Credits</button>
-            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="">Exit</button>
-        </div>
-        
         
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

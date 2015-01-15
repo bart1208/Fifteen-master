@@ -7,7 +7,14 @@
 // MAIN MENU
 function gameMenu()
 {
+	$("#content").empty();			// Empty the main content page
 	
+	var menu = $("<div/>").attr("id", "content-menu").addClass("menu").appendTo( $("#content") );
+	$("<button/>").attr("type", "button").addClass("btn btn-primary btn-lg btn-block").click( function() { newGame(); } ).append("New Game").appendTo(menu);
+	$("<button/>").attr("type", "button").addClass("btn btn-primary btn-lg btn-block").click( function() { createRankingScore(); } ).append("Score").appendTo(menu);
+	$("<button/>").attr("type", "button").addClass("btn btn-primary btn-lg btn-block").click( function() { optionsMenu(); } ).append("Options").appendTo(menu);
+	$("<button/>").attr("type", "button").addClass("btn btn-primary btn-lg btn-block").click( function() { createCreditsWindow(); } ).append("Credits").appendTo(menu);
+	$("<button/>").attr("type", "button").addClass("btn btn-primary btn-lg btn-block").click( function() {  } ).append("Exit").appendTo(menu);
 }
 
 // OPTIONS MENU

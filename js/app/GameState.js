@@ -5,7 +5,11 @@
 
 define(["jquery", "bootstrap.min", "modernizr-2.6.2-respond-1.1.0.min", "../app/MenuState", "../app/GameState", "../app/ScoreState", "../app/CreditsState"], function($) {
 	
-	gameMenu(); 
+	$('#myModal').on('hidden.bs.modal', function (e) {
+  		gameMenu();
+    	console.log("ciao");
+	});
+    gameMenu(); 
 	
 });
 
@@ -30,12 +34,11 @@ var id_timing = null;			// Id timing to stop the timer
 // New Game - Create a table and start game
 function newGame() 
 {	
-	var count = 1;				// Counter
-	timer_game = 0;				// Reset time
-	number_movements = 0;		// Reset number of movements during the game
-	$("#content-menu").hide();		// Hide the main menu
+	var count = 1;			// Counter
+	timer_game = 0;			// Reset time
+	number_movements = 0;	// Reset number of movements during the game
+	$("#content").empty();		// Empty the main content page
 	
-	$("<div>Back</div>").addClass("button button_mini").click( function() { clearInterval(id_timing); gameMenu(); } ).appendTo( $("#content") );	// Back key in game session
 	var timer_element = $("<div>Time 00:00</div>").attr("id", "timer").appendTo( $("#content") );					// DOM element where insert time counter
 	
 	// Create Table of game
@@ -44,10 +47,7 @@ function newGame()
 		var tr = $("<tr/>").appendTo(table);
 		
 		for( var j=0; j<table_dimension; j++ ) {
-			var td = $("<td/>").appendTo(tr);
-			td.attr("id", count);
-			td.addClass("element");
-			td.mousedown( function() { moveElement(this.id);} );
+			var td = $("<td/>").attr("id", count).addClass("element").mousedown( function() { moveElement(this.id);} ).appendTo(tr);
 			
 			if( count < number_elements ) {
 				$("<div />").attr("value", count).css("position", "relative").html(count).appendTo(td);
@@ -58,7 +58,11 @@ function newGame()
 			count++;
 		}
 	}
-	shuffleTable( number_shuffle );   // Shuffle table
+    
+    $("<button>Back</button>").attr("type", "button").addClass("btn btn-primary")
+    	.click( function() { clearInterval(id_timing); gameMenu(); } ).appendTo( $("#content") );	// Back key in game session
+	
+    shuffleTable( number_shuffle );   // Shuffle table
 	
 	// Add timer to the game
 	id_timing = setInterval( function() {

@@ -9,7 +9,10 @@ require.config({
       	app: "../app"
     },
     shim: {
-        "bootstrap.min": ["jquery"]
+        "bootstrap.min": ["jquery"],
+        "app/MenuState": ["jquery"],
+        "app/ScoreState": ["jquery"],
+        "app/CreditsState": ["jquery"]
     }
 });
 
