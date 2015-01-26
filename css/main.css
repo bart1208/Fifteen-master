@@ -1,104 +1,42 @@
-/* 
-    Document   : style
-    Created on : 4-mar-2013, 17.58.01
-    Author     : Bart
-    Description:
-        Purpose of the stylesheet follows.
-*/
-
-/*html { 
-	background: url(../img/texture/background.jpg) no-repeat center center fixed; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}*/
-html { 
-    background-image: url(../img/texture/stressed_linen.png);
-    background-repeat: repeat;
-}
-body { text-align: center; color: #878787; }
-img { display: block; }
-a { color: red; text-decoration: none; }
-a:hover { text-decoration: underline; }
-
-
-/* OPENING CREDITS */
-#opening_credits img { max-width: 500px; width: 90%; margin: 30px auto; }
-
-/* CREDITS */
-#credits { max-width: 400px; margin: 30px auto; padding: 0 20px; text-align: justify; }
+/* GENERAL RULES */
+body { font-family: Verdana, Geneva, sans-serif; padding-bottom: 20px; }
+.center { text-align: center; }
+.btn { min-width: 100px; }
+.margin-side { margin-left: 20px; margin-right: 20px; }
+.margin-bottom { margin-bottom: 20px; }
+th { text-align: center; }
 
 /* Title */
 .title {
+	color: #878787;
+ 	text-align: center;
     font-family: 'Oleo Script Swash Caps', cursive;
     margin: 10px auto;
 }
+.title a:hover { text-decoration: none; }
 
 /* Game Table */
 .table_game {
-	border: 1px solid red;
+	border: 1px solid #2e6da4;
 	border-collapse: collapse;
 	margin: 30px auto;
 }
-.table_game td {
-    border: 1px solid red;
-}
+.table_game td { border: 1px solid #2e6da4; }
 .table_game .element div {
-    background-color: black;
-	width: 100px;
-	height: 100px;
+    background-color: #337ab7;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-size: 40px;
+    color: #fff;
+    width: 100px;
+    padding: 20px 0;
 }
 
 /* MENU */
 .menu button { max-width: 300px; margin: auto; }
+.menu .select { background-color: #286090; border-color: #204d74; }
 
 /* Timer Clock */
-#timer { font-size: 30px; margin: 40px auto; }
+.timer { font-size: 30px; margin: 0 auto 30px auto; color: #878787; }
 
-/* TABLE SCORE */
-.table_score {
-	min-width: 400px;
-	max-width: 600px;
-	margin: 30px auto;
-	border-collapse: collapse;
-}
-.table_score th {
-	padding: 5px 10px;
-	background-color: #E34E4E;
-	color: #911616;
-}
-.table_score tr {
-	background-color: #F4B7B7;
-	color: #C81C1C;
-	border-bottom: 1px solid white;
-}
-.table_score td {
-	padding: 5px 10px;
-}
-
-
-
-@media only screen and (max-width: 480px) { 
-	.element div { width: 80px; height: 80px; }
-	.window_win { 
-		width:300px;
-		height:200px;
-		margin-top: -100px; /*set to a negative number 1/2 of your height*/
-		margin-left: -150px; /*set to a negative number 1/2 of your width*/ 
-	}
-}
-@media only screen and (max-width: 380px) { 
-	.element div { width: 60px; height: 60px; }
-	.button { width: 160px; margin: 20px auto; }
-	.window_win { 
-		width:200px;
-		height:120px;
-		margin-top: -60px; /*set to a negative number 1/2 of your height*/
-		margin-left: -100px; /*set to a negative number 1/2 of your width*/ 
-	}
-}
-@media only screen and (max-width: 280px) { 
-	.element div { width: 40px; height: 40px; }
-	.button { width: 140px; margin: 10px auto; }
-}
+.credits { text-align: left; color: #878787; }
+footer { font-family: 'Oleo Script Swash Caps', cursive; color: #878787; font-size: 16px; text-align: center; margin-top: 20px; }

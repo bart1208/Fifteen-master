@@ -9,7 +9,7 @@ function createCreditsWindow() {
 	$("#content").empty();		// Empty the main content page
 	
 	$("#content").load("html/credits.html", function() { 
-		$("<div>Back</div>").addClass("button button_mini").attr("onclick", "gameMenu()").prependTo( $("#content") );			// Back to Main Menu key
+		$("<button>Back</button>").addClass("btn btn-primary").attr("onclick", "gameMenu()").appendTo( $("#content") );			// Back to Main Menu key
 	});
 	
 	

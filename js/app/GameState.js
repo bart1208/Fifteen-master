@@ -3,16 +3,6 @@
  * Launch the game and manages the various phases of the game 
  */
 
-define(["jquery", "bootstrap.min", "modernizr-2.6.2-respond-1.1.0.min", "../app/MenuState", "../app/GameState", "../app/ScoreState", "../app/CreditsState"], function($) {
-	
-	$('#myModal').on('hidden.bs.modal', function (e) {
-  		gameMenu();
-    	console.log("ciao");
-	});
-    gameMenu(); 
-	
-});
-
 
 /* Global Variables */
 var table_dimension = 4;		// Dimension of the table (dimension X dimension)
@@ -39,8 +29,8 @@ function newGame()
 	number_movements = 0;	// Reset number of movements during the game
 	$("#content").empty();		// Empty the main content page
 	
-	var timer_element = $("<div>Time 00:00</div>").attr("id", "timer").appendTo( $("#content") );					// DOM element where insert time counter
-	
+	var timer_element = $("<div>Time 00:00</div>").addClass("timer").appendTo( $("#content") );					// DOM element where insert time counter
+    
 	// Create Table of game
 	var table = $("<table/>").addClass("table_game").appendTo( $("#content") );
 	for( var i=0; i<table_dimension; i++ ) {

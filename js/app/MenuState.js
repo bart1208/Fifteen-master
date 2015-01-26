@@ -3,7 +3,6 @@
  * Create the menu and browse the various menu items
  */
 
-
 // MAIN MENU
 function gameMenu()
 {
@@ -22,9 +21,9 @@ function optionsMenu()
 {
 	$("#content").empty();			// Empty the main content page
 	
-	var menu = $("<div/>").attr("id", "menu").appendTo( $("#content") );
-	$("<div/>").addClass("button").attr("onclick", "tableDimensionMenu()").append("Table dimension").appendTo(menu);
-	$("<div/>").addClass("button").attr("onclick", "gameMenu()").append("Back").appendTo(menu);
+	var menu = $("<div/>").attr("id", "menu").addClass("menu").appendTo( $("#content") );
+	$("<button/>").attr("type", "button").addClass("btn btn-primary btn-lg btn-block").attr("onclick", "tableDimensionMenu()").append("Table dimension").appendTo(menu);
+	$("<button/>").attr("type", "button").addClass("btn btn-primary btn-lg btn-block").attr("onclick", "gameMenu()").append("Back").appendTo(menu);
 }
 
 // TABLE DIMENSION MENU
@@ -32,14 +31,14 @@ function tableDimensionMenu()
 {
 	$("#content").empty();			// Empty the main content page
 	
-	var menu = $("<div/>").attr("id", "menu").appendTo( $("#content") );
+	var menu = $("<div/>").attr("id", "menu").addClass("menu").appendTo( $("#content") );
 	
 	// Create menu elements
-	$("<div/>").addClass("button X3").click( function() { selectTableDimensionMenu(3); }).append("3 X 3").appendTo(menu);
+	$("<button/>").attr("type", "button").addClass("btn btn-primary btn-lg btn-block X3").click( function() { selectTableDimensionMenu(3); }).append("3 X 3").appendTo(menu);
 	
-	$("<div/>").addClass("button X4").click( function() { selectTableDimensionMenu(4); }).append("4 X 4").appendTo(menu);
+	$("<button/>").attr("type", "button").addClass("btn btn-primary btn-lg btn-block X4").click( function() { selectTableDimensionMenu(4); }).append("4 X 4").appendTo(menu);
 	
-	$("<div/>").addClass("button X5").click( function() { selectTableDimensionMenu(5); }).append("5 X 5").appendTo(menu);
+	$("<button/>").attr("type", "button").addClass("btn btn-primary btn-lg btn-block X5").click( function() { selectTableDimensionMenu(5); }).append("5 X 5").appendTo(menu);
 	
 	selectTableDimensionMenu( table_dimension );
 	
@@ -67,5 +66,5 @@ function tableDimensionMenu()
 		}
 	}
 	
-	$("<div/>").addClass("button").attr("onclick", "optionsMenu()").append("Back").appendTo(menu);
+	$("<button/>").attr("type", "button").addClass("btn btn-primary btn-lg btn-block").attr("onclick", "optionsMenu()").append("Back").appendTo(menu);
 }

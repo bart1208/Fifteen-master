@@ -4,25 +4,19 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <title>15 Puzzle</title>
-        <meta name="description" content="15 Puzzle Game">
+        <meta name="description" content="15 Puzzle Game" />
         <meta name="author" content="Bartolomeo Pasquale" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         
         <script data-main="js/main" src="js/vendor/require.js"></script>
         
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
         <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
-        <link rel="stylesheet" href="css/main.css">
-        <style>
-            body {
-                padding-bottom: 20px;
-            }
-        </style>
-        
-        <link href='//fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/main.css" />
+        <link href='//fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps' rel='stylesheet' type='text/css' />
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -32,21 +26,20 @@
         <!-- Main jumbotron for a primary marketing message or call to action -->
     	<div class="jumbotron">
       		<div class="container title">
-        		<h1 class="title">15 Puzzle</h1>
-        		<p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as 					a starting point to create something more unique.</p>
+                <h1 class="title"><a href="./index.html">15 Puzzle</a></h1>
       		</div>
     	</div>
         
         <div class="container">
             <div class="row">
-            	<div id="content" class="col-md-12">
+            	<div id="content" class="col-md-12 center">
                 
                     <div id="content-menu" class="menu">
-                    	<button type="button" class="btn btn-primary btn-lg btn-block" onclick="newGame();">New Game</button>
-                        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="createRankingScore();">Score</button>
-                        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="optionsMenu();">Options</button>
-                        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="createCreditsWindow();">Credits</button>
-                        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="">Exit</button>
+                    	<button type="button" class="btn btn-primary btn-lg btn-block" disabled="disabled" onclick="newGame();">New Game</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block" disabled="disabled" onclick="createRankingScore();">Score</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block" disabled="disabled" onclick="optionsMenu();">Options</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block" disabled="disabled" onclick="createCreditsWindow();">Credits</button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block" disabled="disabled" onclick="">Exit</button>
                     </div>
 
             	</div>

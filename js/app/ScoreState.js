@@ -26,10 +26,10 @@ function createRankingScore()
 	
 	$("#content").empty();		// Empty the main content page
 	
-	$("<div>Back</div>").addClass("button button_mini").attr("onclick", "gameMenu()").appendTo( $("#content") );			// Back to Main Menu key
-	$("<div>Reset</div>").addClass("button button_mini").click( function() { delateSavedGame(); createRankingScore(); }).appendTo( $("#content") );	// Reset Saved Game
+	$("<div>Back</div>").attr("type", "button").addClass("btn btn-primary margin-side margin-bottom").attr("onclick", "gameMenu()").appendTo( $("#content") );			// Back to Main Menu key
+	$("<div>Reset</div>").attr("type", "button").addClass("btn btn-primary margin-side margin-bottom").click( function() { delateSavedGame(); createRankingScore(); }).appendTo( $("#content") );	// Reset Saved Game
 	
-	var table = $("<table/>").addClass("table_score").appendTo( $("#content") );
+	var table = $("<table/>").addClass("table table-striped").appendTo( $("#content") );
 	$("<tr/>")
 			.append($("<th/>").html("Position"))
 			.append($("<th/>").html("Name"))
