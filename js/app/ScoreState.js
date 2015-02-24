@@ -1,4 +1,4 @@
-/* 
+/*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
@@ -23,12 +23,13 @@ function createRankingScore()
 	if( localStorage.ranking ) {		// Put in "score" the conten of "localStorage.ranking" if existe
 		scores = $.parseJSON( localStorage.ranking );
 	}
-	
+
 	$("#content").empty();		// Empty the main content page
-	
-	$("<div>Back</div>").attr("type", "button").addClass("btn btn-primary margin-side margin-bottom").attr("onclick", "gameMenu()").appendTo( $("#content") );			// Back to Main Menu key
-	$("<div>Reset</div>").attr("type", "button").addClass("btn btn-primary margin-side margin-bottom").click( function() { delateSavedGame(); createRankingScore(); }).appendTo( $("#content") );	// Reset Saved Game
-	
+
+	$("<div>Back</div>").attr("type", "button").addClass("btn btn-primary margin-side margin-bottom").attr("onclick", "gameMenu()").appendTo( $("#content") );	// Back to Main Menu key
+	$("<div>Reset</div>").attr("type", "button").addClass("btn btn-primary margin-side margin-bottom")
+    	.click( function() { delateSavedGame(); createRankingScore(); }).appendTo( $("#content") );	// Reset Saved Game
+
 	var table = $("<table/>").addClass("table table-striped").appendTo( $("#content") );
 	$("<tr/>")
 			.append($("<th/>").html("Position"))
@@ -37,15 +38,15 @@ function createRankingScore()
 			.append($("<th/>").html("Movements"))
 			.append($("<th/>").html("Date"))
 			.appendTo(table);
-	
+
 	for( var i=0; i<scores.length; i++ ) {
 		var tr = $("<tr/>").appendTo(table);
-		
+
 		$("<td/>").html(i+1).appendTo(tr);
 
 		for( var key in scores[i] ) {
 			var td = $("<td/>").appendTo(tr);
-			
+
 			if( key == "date" ) {
 				td.html( scores[i][key] );
 			}
@@ -68,9 +69,9 @@ function saveScore( player_name )
 		rank = $.parseJSON( localStorage.ranking );
 	}
 	var date = new Date();
-	
+
 	var new_score = new Score( player_name, timer_game, number_movements, date.toLocaleString() );
-	
+
 	for( var i=0; i<number_elements_ranking; i++ ) {
 		if( !rank[i] ) {
 			rank.push(new_score);
@@ -81,11 +82,11 @@ function saveScore( player_name )
 			break;
 		}
 	}
-	
+
 	if( rank.length > number_elements_ranking ) {
 		rank.pop();
 	}
-	
+
 	localStorage.ranking = JSON.stringify( rank );
 }
 
