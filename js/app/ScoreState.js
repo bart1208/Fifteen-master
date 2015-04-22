@@ -11,7 +11,7 @@ function Score( name, time, movements, date ) {
 	this.date = date;
 }
 
-var scores = new Array();			// Array of "score" objects
+var scores = [];			// Array of "score" objects
 
 var number_elements_ranking = 20;
 
@@ -64,7 +64,7 @@ function createRankingScore()
 // Save score
 function saveScore( player_name )
 {
-	var rank = new Array();
+	var rank = [];
 	if( localStorage.ranking ) {
 		rank = $.parseJSON( localStorage.ranking );
 	}
