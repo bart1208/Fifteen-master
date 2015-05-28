@@ -22,6 +22,7 @@ require(["jquery", "bootstrap.min", "modernizr-2.6.2-respond-1.1.0.min", "app/Me
     function ($) {
         $('#myModal').on('hidden.bs.modal', function (e) {
   		    gameMenu();
-	});
-	gameMenu();
-});
+		});
+		gameMenu();
+	}
+);

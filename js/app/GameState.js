@@ -154,7 +154,7 @@ function shuffleTable( numbers_movement )
 
 	while( numbers_movement > 0 ) {
 		var empty_element = $(".empty");
-		var movable_elements = new Array();				// Array of possibles elements to move
+		var movable_elements = [];				// Array of possibles elements to move
 
 		for( var i=0; i<number_elements; i++ ) {		// Control if each elemnt is 'movible' and add it in 'movable_elements'
 			if( canSwap( i+1, empty_element.attr("id") ) && last_move_element != i+1 ) {
